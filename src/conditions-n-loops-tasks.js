@@ -216,8 +216,14 @@ function convertNumberToString(numberStr) {
  *  '0123210'   => true
  *  'qweqwe'    => false
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  let revertedStr = '';
+  for (let i = str.length - 1; i >= 0; i -= 1) {
+    const symbol = str[i];
+    revertedStr += symbol;
+  }
+  if (str === revertedStr) return true;
+  return false;
 }
 
 /**
